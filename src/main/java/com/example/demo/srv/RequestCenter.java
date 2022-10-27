@@ -27,8 +27,7 @@ public class RequestCenter {
     Request savedRequest = requestRepository.save(Request.build(jobRequest));
 
     if (delayUntil == null) {
-      // nothing changed
-      //requestHandler.run(jobRequest);
+      requestHandler.run(jobRequest);
       return savedRequest;
     }
 
